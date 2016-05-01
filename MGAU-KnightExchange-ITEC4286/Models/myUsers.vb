@@ -23,10 +23,12 @@ Public Class myUsers
         Public Property user_email As String
 
         <Required>
-        <Display(Name:="Permission Level")>
-        Public Property user_permission As String
+    <Display(Name:="Permission Level")>
+    Public Property user_permission As String
 
-        Public Overridable Property books As ICollection(Of books) = New HashSet(Of books)
+    Public Property theUser As ApplicationUser
+
+    Public Overridable Property books As ICollection(Of books) = New HashSet(Of books)
         Public Overridable Property products As ICollection(Of products) = New HashSet(Of products)
     End Class
 
