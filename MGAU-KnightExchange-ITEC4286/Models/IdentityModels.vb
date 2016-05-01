@@ -1,4 +1,5 @@
-﻿Imports System.Security.Claims
+﻿Imports System.Data.Entity
+Imports System.Security.Claims
 Imports System.Threading.Tasks
 Imports Microsoft.AspNet.Identity
 Imports Microsoft.AspNet.Identity.EntityFramework
@@ -19,7 +20,13 @@ Public Class ApplicationDbContext
     Inherits IdentityDbContext(Of ApplicationUser)
     Public Sub New()
         MyBase.New("DefaultConnection", throwIfV1Schema:=False)
+
     End Sub
+    Public Overridable Property Books() As DbSet(Of books)
+    Public Overridable Property Book_Info() As DbSet(Of book_info)
+    Public Overridable Property MyUsers() As DbSet(Of myUsers)
+    Public Overridable Property Products() As DbSet(Of products)
+    Public Overridable Property Product_Info() As DbSet(Of product_info)
 
     Public Shared Function Create() As ApplicationDbContext
         Return New ApplicationDbContext()

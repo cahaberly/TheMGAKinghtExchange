@@ -198,13 +198,24 @@
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\Startup.Auth.vb" />
     <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\booksController.vb" />
+    <Compile Include="Controllers\book_infoController.vb" />
     <Compile Include="Controllers\ManageController.vb" />
+    <Compile Include="Controllers\myUsersController.vb" />
+    <Compile Include="Controllers\productsController.vb" />
+    <Compile Include="Controllers\product_infoController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="Models\AccountViewModels.vb" />
+    <Compile Include="Models\books.vb" />
+    <Compile Include="Models\book_info.vb" />
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="Models\ManageViewModels.vb" />
+    <Compile Include="Models\products.vb" />
+    <Compile Include="Models\product_info.vb" />
+    <Compile Include="Models\myUsers.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -242,12 +253,14 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\PublishProfiles\MGAU-KnightExchange-ITEC428620160501094949.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\KnightExchangeLogo.png" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -271,6 +284,31 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.vbhtml" />
     <Content Include="Views\Shared\Lockout.vbhtml" />
     <Content Include="Views\Shared\_LoginPartial.vbhtml" />
+    <Content Include="Views\book_info\Create.vbhtml" />
+    <Content Include="Views\book_info\Delete.vbhtml" />
+    <Content Include="Views\book_info\Details.vbhtml" />
+    <Content Include="Views\book_info\Edit.vbhtml" />
+    <Content Include="Views\book_info\Index.vbhtml" />
+    <Content Include="Views\books\Create.vbhtml" />
+    <Content Include="Views\books\Delete.vbhtml" />
+    <Content Include="Views\books\Details.vbhtml" />
+    <Content Include="Views\books\Edit.vbhtml" />
+    <Content Include="Views\books\Index.vbhtml" />
+    <Content Include="Views\product_info\Create.vbhtml" />
+    <Content Include="Views\product_info\Delete.vbhtml" />
+    <Content Include="Views\product_info\Details.vbhtml" />
+    <Content Include="Views\product_info\Edit.vbhtml" />
+    <Content Include="Views\product_info\Index.vbhtml" />
+    <Content Include="Views\products\Create.vbhtml" />
+    <Content Include="Views\products\Delete.vbhtml" />
+    <Content Include="Views\products\Details.vbhtml" />
+    <Content Include="Views\products\Edit.vbhtml" />
+    <Content Include="Views\products\Index.vbhtml" />
+    <Content Include="Views\myUsers\Create.vbhtml" />
+    <Content Include="Views\myUsers\Delete.vbhtml" />
+    <Content Include="Views\myUsers\Details.vbhtml" />
+    <Content Include="Views\myUsers\Edit.vbhtml" />
+    <Content Include="Views\myUsers\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

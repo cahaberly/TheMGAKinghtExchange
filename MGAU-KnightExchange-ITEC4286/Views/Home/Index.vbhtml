@@ -3,29 +3,53 @@
 End Code
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Knight Exchange</h1>
+    <div style="float:left;"><img src="~/Images/KnightExchangeLogo.png" style="width: 300px; height: 248px;" /></div>
+    <p class="lead">
+        Welcome to the Knight Exchange!!
+        Your place to trade books, supplies and find tutoring
+    </p>
+
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Search our books:</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+            Type a title, ISBN or author to see what we may have in stock.
+
+
+            @Using Html.BeginForm("Index", "book_info", FormMethod.Get)
+                @<p>
+                @Html.TextBox("SearchString", TryCast(ViewBag.CurrentFilter, String))
+                <input type="submit" value="Search" />
+            </p>
+            End Using
+
+        </div>
+
+
+        <div class="col-md-4">
+            <h2>Search our products:</h2>
+            <p>
+                Type in a product name or a brief description to see what others may have to offer.
+                @Using Html.BeginForm("Index", "product_info", FormMethod.Get)
+                    @<p>
+                    @Html.TextBox("SearchString", TryCast(ViewBag.CurrentFilter, String))
+                    <input type="submit" value="Search" />
+                </p>
+                End Using
+            </div>
+            <div class="col-md-4">
+                <h2>User Search:</h2>
+                <p>
+                    Search for a specific user. Type the last name or first name.
+                    @Using Html.BeginForm("Index", "myUsers", FormMethod.Get)
+                        @<p>
+                        @Html.TextBox("SearchString", TryCast(ViewBag.CurrentFilter, String))
+                        <input type="submit" value="Search" />
+                    </p>
+                    End Using
+                </div>
+            </div>
+
